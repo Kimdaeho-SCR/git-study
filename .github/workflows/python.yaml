@@ -20,6 +20,6 @@ jobs:
         run: python -c "import sys; print(sys.version)"
         id: python-version
       - name: Save output
-        run: echo"${{steps.python-version.outputs.stdout}}" >> python_versions.txt
+        run: echo"${{ steps.python-version.outputs.stdout }}" >> python_versions.txt
       - name: Display saved output
         run: cat python_versions.txt
